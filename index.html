@@ -15,18 +15,20 @@
   <header class="header">
     <nav class="header__container">
       <div class="header__title">
-        <h1 class="header__title--sub">Taller Front-End Usach 2024</h1>
-        <h1 class="header__title--principal">PROYECTO FINAL</h1>
+        <h1>
+          <span class="header__title--sub">Taller Front-End Usach 2024</span>
+          <br><span class="header__title--principal">PROYECTO FINAL</span>
+        </h1>
       </div>
-      <div class="header__search">
+      <form class="header__search">
         <input type="number" class="header__input" placeholder="Busca tu Pokemón por N°: 900">
-        <button type="button" id="header__nav--search" href class="header__button"><svg
+        <button type="submit" id="header__nav--search" href class="header__button">BUSCAR <svg
             xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd"
               d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0"
               clip-rule="evenodd" />
           </svg></button>
-      </div>
+      </form>
       <img class="header__logo" src="/assets/img/poke.png" alt="header__logo">
     </nav>
   </header>
@@ -46,6 +48,7 @@
         <h5 class="info__posicion">#1000</h5>
       </article>
     </section>
+
     <div class="button">
       <button class="button_cta"> QUIERO OTRO POKEMON</button>
     </div>
@@ -53,9 +56,7 @@
   </main>
 
   <footer class="footer">
-
     <div class="footer__credito">
-
       <p class="footer__texto">Creado por:</p>
       <div class="footer__links">
         <a href="https://github.com/Mayer24" class="footer__link" target="_blank"><svg
@@ -73,9 +74,7 @@
       </div>
     </div>
 
-    <div class="footer__datos">
-      <p class="footer__info"> Información extraida de PokeAPI <br> &copy;2024 Todos los derechos reservados.</p>
-    </div>
+    <p class="footer__info"> Información extraida de PokeAPI <br> &copy;2024 Todos los derechos reservados.</p>
 
   </footer>
 

@@ -1,30 +1,118 @@
 @import'__mixin';
-@import '_variables';
+@import '__variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+.header {
+    background: $gradiente;
+
+    &__container {
+        padding: 2rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        // align-self: center;
+        color: $color-texto-claro;
+        text-shadow: 1px 1px 3.5px rgba(0, 0, 0, 0.1);
+
+        &--sub {
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
+
+        &--principal {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+    }
+
+    &__search {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        // align-self: center;
+        height: 2.45rem;
+        flex-grow: 1;
+    }
+
+    &__input {
+        padding: 1rem;
+        align-self: center;
+        border-style: none;
+        // border: 1px solid $color-detalles;
+        border-radius: 0.75rem;
+        box-shadow: inset 0 0 3px $color-detalles;
+        flex-grow: 1;
+        max-width: 400px;
+    }
+
+    &__button {
+        padding: 0.9rem;
+        align-self: center;
+        border-style: none;
+        border-radius: 0.75rem;
+        box-shadow: 1px 1px 3.5px rgba(0, 0, 0, 0.1);
+        background-color: $color-secundario;
+        color: $color-texto-claro;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.075s ease-in;
+
+        &:hover {
+            background-color: $color-detalles;
+        }
+    }
+
+    &__logo {
+        height: auto;
+        max-height: 4rem;
+        max-width: 100%;
+    }
+}
+
 
 .container {
     display: flex;
     justify-content: center;
-    }
+}
 
 .card {
-    &__element{
-        background:#6DB5E5 ;
-        display:grid;
+    &__element {
+        background: #6DB5E5;
+        display: grid;
         border-radius: 2rem;
     }
-    &__img{
+
+    &__img {
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        margin:1rem;
+        margin: 1rem;
     }
+
     &__name {
         @include NombrePokemon
     }
-    &__type{
+
+    &__type {
         @include TipoPokemon
-    } 
-}  
+    }
+}
+
 .info {
     &__hp {
         font-family: 'inter', sans-serif;
@@ -32,24 +120,28 @@
         padding: 0 1rem;
         margin: 1rem;
     }
-    &__ataque{
+
+    &__ataque {
         font-family: 'inter', sans-serif;
         font-size: 1rem;
         padding: 0 1rem;
         margin: 1rem;
     }
+
     &__defensa {
         font-family: 'inter', sans-serif;
         font-size: 1rem;
         padding: 0 1rem;
         margin: 1rem;
     }
+
     &__velocidad {
         font-family: 'inter', sans-serif;
         font-size: 1rem;
         padding: 0 1rem;
         margin: 1rem;
     }
+
     &__posicion {
         font-family: 'inter', sans-serif;
         font-size: 1rem;
@@ -57,79 +149,71 @@
         margin: 1rem;
     }
 }
+
 .button {
     display: grid;
     justify-content: center;
 }
 
-
-
-
-body {
-    font-family: 'inter';
-}
-
-.header {
-    background: $gradiente;
-
-
-    &__container {
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__title {
-        font-size: 1.5rem;
-        text-align: left;
-    }
-
-    &__search {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-    }
-
-    &__input {
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 0.5rem;
-        width: 100%;
-    }
-
-    &__nav--search {
-        padding: 0.5rem 1rem;
-        background-color: #af1d1d;
-        border: none;
-        border-radius: 1rem;
-        padding: 2rem;
-
-    }
-
-    &__logo {
-        height: 5rem;
-
-    }
-}
-
-
 .footer {
-    background: $gradiente;
-    color: #fff;
+    background: $gradiente-inverso;
+    color: $color-texto-claro;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
 
     &__credito {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
 
-    p {
-        background-color: #af1d1d;
+    &__texto {
+        text-align: left;
+        font-size: 0.75rem;
     }
 
-    a {
-        background-color: aqua;
+    &__links {
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: left;
     }
 
+    &__link {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        transition: color 0.05s ease-in;
+
+        &:hover {
+            color: $color-detalles;
+        }
+    }
+
+    &__info {
+        text-align: right;
+        font-size: 0.75rem;
+        align-self: center;
+
+        @media (max-width: 768px) {
+            align-items: center;
+            text-align: center;
+        }
+    }
 }

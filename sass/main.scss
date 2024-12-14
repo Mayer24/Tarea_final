@@ -19,8 +19,11 @@
 
         @media (max-width: 992px) {
             flex-direction: column;
+            gap: 1rem;
+            /* Baja al final */
         }
     }
+
 
     &__title {
         text-align: left;
@@ -38,6 +41,10 @@
             font-size: 2rem;
         }
 
+        @media (max-width: 992px) {
+            order: 2;
+            text-align: center;
+        }
     }
 
     &__search {
@@ -47,6 +54,14 @@
         // align-self: center;
         height: 2.45rem;
         flex-grow: 1;
+
+
+        @media (max-width: 992px) {
+            width: 100%;
+            /* Ocupar ancho completo */
+            order: 3;
+            /* Baja al final */
+        }
     }
 
     &__input {
@@ -75,12 +90,20 @@
         &:hover {
             background-color: $color-detalles;
         }
+
+
     }
 
     &__logo {
         height: auto;
         max-height: 4rem;
         max-width: 100%;
+
+        @media (max-width: 992px) {
+            max-height: 3rem;
+            text-align: center;
+        }
+
     }
 }
 
@@ -164,6 +187,7 @@
     justify-content: space-between;
     align-self: center;
 
+
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -176,6 +200,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+
 
         @media (max-width: 768px) {
             align-items: center;
@@ -204,6 +229,8 @@
         &:hover {
             color: $color-detalles;
         }
+
+
     }
 
     &__info {

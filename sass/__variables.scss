@@ -1,0 +1,18 @@
+//Variables Colores
+$color-primario: #AAB1EC;
+$color-secundario: #6DB5E5;
+$color-texto: #192856;
+$color-detalles: #192856;
+$color-fondo: #5C6AD2;
+$gradiente: linear-gradient(180deg, #435AA2 0%, #AAB1EC 100%);
+
+//Importacion de Texto
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

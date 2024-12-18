@@ -34,23 +34,17 @@
   </header>
 
   <main>
-    <section class="container">
-      <article class="card__element">
-        <img class="card__img" src="assets/img/flor.jpg" alt="pokemon">
-        <h2 class="card__name">Nombre de pokemon</h2>
-        <h3 class="card__type">ELEMENTO</h3>
-      </article>
-      <article class="info__element">
-        <h4 class="info__hp">HP 100</h4>
-        <h5 class="info__ataque">Ataque</h5>
-        <h5 class="info__defensa">Defensa</h5>
-        <h5 class="info__velocidad">Velocidad</h5>
-        <h5 class="info__posicion">#1000</h5>
-      </article>
-    </section>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+<!-- Aqui se introducen las cards de c/pokemon (estructura del template) -->
+      </div>
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
     <div class="button">
-      <button class="button_cta"> QUIERO OTRO POKEMON</button>
+      <button type="button" class="button__cta">QUIERO OTRO POKEMON</button>
     </div>
 
   </main>
@@ -77,6 +71,28 @@
     <p class="footer__info"> Información extraida de PokeAPI <br> &copy;2024 Todos los derechos reservados.</p>
 
   </footer>
+
+  <template id="template-card">
+    <section class="swiper-slide">
+      <article class="card__element">
+        <!-- div---evaluar  -->
+        <div>
+          <img class="card__img"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/90.png"
+            alt="pokemon">
+          <h2 class="card__name">Fletchinder</h2>
+          <h3 class="card__type">ELÉCTRICO</h3>
+        </div>
+      </article>
+      <article class="info__element">
+        <h4 id="stat-hp" class="info__hp">HP 100</h4>
+        <h5 id="stat-atk" class="info__ataque">Ataque</h5>
+        <h5 id="stat-def" class="info__defensa">Defensa</h5>
+        <h5 id="stat-speed" class="info__velocidad">Velocidad</h5>
+        <h5 id="stat-number" class="info__posicion">#1000</h5>
+      </article>
+    </section>
+  </template>
 
   <script src="js/script.js"></script>
 </body>

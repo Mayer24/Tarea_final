@@ -8,7 +8,6 @@
     font-family: 'inter', sans-serif;
 }
 
-//se agregó estilos en el body, para que sea flex en direccion vertical y que su altura sea el 100% del digital viewport height (antes quedaba flotando)
 body {
     height: 100dvh;
     display: flex;
@@ -96,18 +95,13 @@ body {
     }
 }
 
-//se agregó propiedad flex-grow en al hijo del body.
-//Esto provoca que este elemento crezca hasta que el padre se llene, permitiendo
-//que los demás hijos (en este caso hermanos del main, header y footer) no cambien
-//su tamaño. El cual esta definido por flex-grow:0, es decir se ajustan al
-//conenido.
 main {
     flex-grow: 1;    
 }
 
 
 .swiper {
-    width: 95%; // O el ancho deseado
+    width: 95%; // ancho deseado
     height: auto;
     margin-top: clamp(3rem, 1.9565rem + 5.2174vw, 6rem); // Espacio respecto al header
     display: flex;
@@ -135,7 +129,6 @@ main {
         border-width: 3px 0px 3px 3px;
         border-radius: 2rem 0rem 0rem 2rem;
         padding-bottom: 1.5rem;
-        //se corta la sombra: valor x, valor y se corta, difusion
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
     }
 
@@ -211,9 +204,6 @@ main {
     display: grid;
     justify-content: center;
     margin: 2rem 0rem;
-    // align-items: center;
-    // align-self: center;
-    // align-content: center;
 
     //se incuye mixin boton
     &__cta{
@@ -230,7 +220,7 @@ main {
     padding: 2rem 2rem;
     display: flex;
     justify-content: space-between;
-    // align-self: center;
+
 
 
     @media (max-width: 768px) {

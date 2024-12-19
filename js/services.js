@@ -76,3 +76,5 @@ export const generateArrayOfUrls = (middle, qty) => {
     }
     return result;
 }
+
+

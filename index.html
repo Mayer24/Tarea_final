@@ -33,26 +33,40 @@
                             clip-rule="evenodd" />
                     </svg></button>
             </div>
-            <img class="header__logo" src="/assets/img/poke.png" alt="header__logo">
+            <img class="header__logo" src="assets/img/poke.png" alt="header__logo">
         </nav>
     </header>
 
     <main>
         <div class="swiper">
             <div class="swiper-wrapper" id="contenedor-cards">
-                <!-- Aqui se introducen las cards de c/pokemon (estructura del template) -->
+                <!-- Template para los Pokémon -->
+                <template id="template-card">
+                    <section class="swiper-slide">
+                        <article class="card__element">
+                            <img class="card__img" src="" alt="pokemon">
+                            <h2 class="card__name"></h2>
+                            <h3 class="card__type"></h3>
+                        </article>
+                        <article class="info__element">
+                            <h4 class="info__hp"></h4>
+                            <h5 class="info__ataque"></h5>
+                            <h5 class="info__defensa"></h5>
+                            <h5 class="info__velocidad"></h5>
+                            <h5 class="info__posicion"></h5>
+                        </article>
+                    </section>
+                </template>
             </div>
-            <!-- <div class="swiper-pagination"></div> -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-
+    
         <div class="button">
             <button type="button" class="button__cta" id="random__button">QUIERO OTRO POKEMON</button>
         </div>
-
     </main>
-
+    
     <footer class="footer">
         <div class="footer__credito">
             <p class="footer__texto">Creado por:</p>
@@ -76,25 +90,6 @@
 
     </footer>
 
-    <template id="template-card">
-        <section class="swiper-slide">
-            <article class="card__element">
-                <img class="card__img"
-                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/90.png"
-                    alt="pokemon">
-                <h2 class="card__name">Fletchinder</h2>
-                <h3 class="card__type">ELÉCTRICO</h3>
-            </article>
-            <article class="info__element">
-              <!-- Cambie los ids por las clases porque cada vez que se llama al element get by id puede "sobreescribir" la tarjeta -->
-                <h4 class="info__hp">HP 100</h4>
-                <h5 class="info__ataque">Ataque</h5>
-                <h5 class="info__defensa">Defensa</h5>
-                <h5 class="info__velocidad">Velocidad</h5>
-                <h5 class="info__posicion">#1000</h5>
-            </article>
-        </section>
-    </template>
 
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

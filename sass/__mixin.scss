@@ -3,10 +3,36 @@
     font-size: 2rem;
     padding: 0 1rem;
     margin: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3.5px rgba(0, 0, 0, 0.1);
 }
+
 @mixin TipoPokemon {
     font-family: 'inter', sans-serif;
     font-size: 1rem;
     padding: 0 1rem;
     margin: 1rem;
+    //Extras
+    margin: 0rem 2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+//Se agrega boton
+@mixin BotonCeleste {
+    padding: 0.9rem;
+    align-self: center;
+    border-style: none;
+    border-radius: 0.75rem;
+    box-shadow: 1px 1px 3.5px rgba(0, 0, 0, 0.1);
+    background-color: $color-secundario;
+    color: $color-texto-claro;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.075s ease-in;
+
+    &:hover {
+        background-color: $color-detalles;
+    }
 }

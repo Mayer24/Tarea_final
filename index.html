@@ -21,6 +21,11 @@
                     <br><span class="header__title--principal">PROYECTO FINAL</span>
                 </h1>
             </div>
+<<<<<<< HEAD
+=======
+            <!-- Se agrego un form y id al input, cambio de imput al boton -->
+             <!-- Se cambio el form por div ya que no guarda info en una base, sino que se esta consultando entre lo que ya se esta mostrando -->
+>>>>>>> 4f9d989398c67c56d51043cf5b033b8ff13b5574
             <div id="search-form" class="header__search">
                 <input id="pokemon-number" min="1" max="1025" type="number" class="header__input"
                     placeholder="Busca tu Pokemón por N°: 900">
@@ -38,18 +43,42 @@
     <main>
         <div class="swiper">
             <div class="swiper-wrapper" id="contenedor-cards">
+<<<<<<< HEAD
                 <!-- AQUI SE COLOCAN LAS CARDS -->
 
+=======
+                <!-- Template para los Pokémon -->
+                <template id="template-card">
+                    <section class="swiper-slide">
+                        <article class="card__element">
+                            <img class="card__img" src="" alt="pokemon">
+                            <h2 class="card__name"></h2>
+                            <h3 class="card__type"></h3>
+                        </article>
+                        <article class="info__element">
+                            <h4 class="info__hp"></h4>
+                            <h5 class="info__ataque"></h5>
+                            <h5 class="info__defensa"></h5>
+                            <h5 class="info__velocidad"></h5>
+                            <h5 class="info__posicion"></h5>
+                        </article>
+                    </section>
+                </template>
+>>>>>>> 4f9d989398c67c56d51043cf5b033b8ff13b5574
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4f9d989398c67c56d51043cf5b033b8ff13b5574
         <div class="button">
             <button type="button" class="button__cta" id="random__button">QUIERO OTRO POKEMON</button>
         </div>
     </main>
-
+    
     <footer class="footer">
         <div class="footer__credito">
             <p class="footer__texto">Creado por:</p>
@@ -68,6 +97,7 @@
                     </svg> VIOLETA</a>
             </div>
         </div>
+<<<<<<< HEAD
         <p class="footer__info"> Información extraida de PokeAPI <br> &copy;2024 Todos los derechos reservados.</p>
     </footer>
 
@@ -88,6 +118,13 @@
             </article>
         </section>
     </template>
+=======
+
+        <p class="footer__info"> Información extraida de PokeAPI <br> &copy;2024 Todos los derechos reservados.</p>
+
+    </footer>
+
+>>>>>>> 4f9d989398c67c56d51043cf5b033b8ff13b5574
 
     <!-- Swiper Slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

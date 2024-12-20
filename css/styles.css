@@ -193,7 +193,8 @@ main {
 }
 .info__posicion {
   font-family: "inter", sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
   padding: 0 1rem;
   margin: 1rem;
 }
@@ -274,6 +275,17 @@ main {
   .footer__info {
     text-align: center;
   }
+<<<<<<< HEAD
+=======
+}
+
+.none {
+  display: none !important;
+}
+
+.invalid__input {
+  border: 2px solid red;
+>>>>>>> 4f9d989398c67c56d51043cf5b033b8ff13b5574
 }
 
 /*# sourceMappingURL=styles.css.map */
